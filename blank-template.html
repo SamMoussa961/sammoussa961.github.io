@@ -14,24 +14,30 @@ part2 of assignment 2
   </head>
   <body>
 <table>
-	<caption>Data about the planets of our solar system (Planetary facts taken from <a href=""> Nasa's Planetary Fact Sheet - Metric.</a>).</caption>
+	<caption>Data about the planets of our solar system (Planetary facts taken from <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/"> Nasa's Planetary Fact Sheet - Metric.</a>).</caption>
+<colgroup>
+<col span="2">
+<col style="border: 2px solid black">
+<col span="9">
+</colgroup>
 	<thead>
 	<tr>
+		<th rowspan="" colspan="2"></th>
 		<th> Name </th>
-		<th> Mass (1028kg) </th>
+		<th> Mass (10<sup>24</sup>kg) </th>
 		<th> Diameter (km) </th>
-		<th> Density (kg/m3) </th>
-		<th> Gravity (m/s2) </th>
+		<th> Density (kg/m<sup>3</sup>) </th>
+		<th> Gravity (m/s<sup>2</sup>) </th>
 		<th> Length of day (hours) </th>
-		<th> Distance from Sun (108km) </th>
-		<th> Mean temperature (%temp C) </th>
+		<th> Distance from Sun (10<sup>6</sup>km) </th>
+		<th> Mean temperature (&deg;C) </th>
 		<th> Number of moons </th>
 		<th> Notes </th>
 	</tr>
 	</thead>
 	<tbody>
 	<tr>
-		<th rowspan="4"> Terrestrial planets</th>
+		<th rowspan="4" colspan="2"> Terrestrial planets</th>
 		<th> Mercury </td>
 		<td> 0.330 </td>
 		<td> 4,879 </td>
@@ -80,6 +86,8 @@ part2 of assignment 2
           	<td>The red planet</td>
         </tr>
         <tr>
+		<th rowspan="4">Jovian planets</th>
+		<th rowspan="2">Gas giants</th>
           	<th>Jupiter</th>
           	<td>1898</td>
           	<td>142,984</td>
@@ -104,6 +112,7 @@ part2 of assignment 2
           	<td></td>
         </tr>
         <tr>
+		<th rowspan="2">Ice giants</th>
           	<th>Uranus</th>
           	<td>86.8</td>
           	<td>51,118</td>
@@ -128,7 +137,7 @@ part2 of assignment 2
           	<td></td>
         </tr>
 	<tr>
-		<th rowspan="1"> Dwarf planets</th>
+		<th rowspan="1" colspan="2"> Dwarf planets</th>
 		<th>Pluto</th>
 		<td>0.0146</td>
 		<td>2,370</td>
