@@ -25,27 +25,29 @@ randomize.addEventListener('click', result);
 
 function result() {
 
+  let newStory = storyText;
+
   const xItem = randomValueFromArray(insertX);
   const yItem = randomValueFromArray(insertY);
   const zItem = randomValueFromArray(insertZ);
-  let newStroy = storyText
-    .replace(/:insertx:/g, xItem)
-    .replace(/:inserty:/g, yItem)
-    .replace(/:insertz:/g, zItem);
+
+  newStory = newStory.replaceAll(":insertx:", xItem);
+  newStory = newStory.replaceAll(":inserty:", yItem);
+  newStory = newStory.replaceAll(":insertz:", zItem);
 
   if(customName.value !== '') {
     const name = customName.value;
-    newStroy.replace(/Bob/g, name)
+    newStory = newStory.replaceAll("Bob", name);
 
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(300/14);
-    const temperature =  Math.round((94-32)*5/9);
-    newStroy.replace(/94 fahrenheit/g, temperature + " Centigrade")
-    newStroy.replace(/300 pounds/g, weight + "Stones")
+    const weight = Math.round(300/14) + " Stones";
+    const temperature =  Math.round((94-32)*5/9) + " Centigrade";
+    newStory = newStory.replaceAll(/94 fahrenheit/g, temperature);
+    newStory = newStory.replaceAll(/300 pounds/g, weight);
   }
 
-  story.textContent = newStroy;
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }
