@@ -1,3 +1,10 @@
+/**
+ * Student Name: Samer Moussa
+ * Student Number: 100943496
+ * File name: main.js
+ * Due Date: august 1st, 2024
+ * Description: assignment 4 part 1 - Silly story generator
+ */
 const customName = document.getElementById('customname');
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
