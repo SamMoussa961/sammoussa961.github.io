@@ -78,9 +78,6 @@ collisionDetect() {
         }
     }
     }
-    
-
-
 }
 
 const balls = [];
