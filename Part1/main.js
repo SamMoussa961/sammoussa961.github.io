@@ -21,19 +21,17 @@ const insertY = ["the soup kitchen", "Disneyland", "the White House"];
 const insertZ = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"];
 
 
-function generateNewStory(){
-  let xItem = randomValueFromArray(insertX);
-  let yItem = randomValueFromArray(insertY);
-  let zItem = randomValueFromArray(insertZ);
+randomize.addEventListener('click', result);
+
+function result() {
+
+  const xItem = randomValueFromArray(insertX);
+  const yItem = randomValueFromArray(insertY);
+  const zItem = randomValueFromArray(insertZ);
   let newStroy = storyText
     .replace(/:insertx:/g, xItem)
     .replace(/:inserty:/g, yItem)
     .replace(/:insertz:/g, zItem);
-  return newStroy;
-}
-randomize.addEventListener('click', result);
-
-function result() {
 
   if(customName.value !== '') {
     const name = customName.value;
