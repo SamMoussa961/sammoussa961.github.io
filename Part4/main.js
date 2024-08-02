@@ -36,7 +36,7 @@ class Shape {
 }
 
 class Ball extends Shape{
-    constructor(x, y, velX, velY, color, size, exist) {
+    constructor(x, y, velX, velY, color, size) {
         super(x, y, velX, velY);
         this.color = color;
         this.size = size;
@@ -87,9 +87,9 @@ collisionDetect() {
 }
 
 class EvilCircle extends Shape{
-    constructor(x, y, velX, velY, color, size, exist) {
+    constructor(x, y, velX, velY, color, size) {
         super(x, y, 20, 20);
-        this.color = white;
+        this.color = "white";
         this.size = 10;
         this.exist = true;
 
@@ -114,7 +114,7 @@ class EvilCircle extends Shape{
 
 draw() {
     ctx.beginPath();
-    ctx.lineWidth(3);
+    ctx.lineWidth = 3;
     ctx.strokeStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
@@ -141,7 +141,7 @@ checkBounds() {
 
 collisionDetect() {
     for (const ball of balls) {
-    if (!ball.exist) {
+    if (ball.exist) {
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -180,18 +180,13 @@ const evilCircle = new EvilCircle(
     random(0 + size, height - size),
     random(-7, 7),
     random(-7, 7),
+    "black",
     size
 );
 
 function loop() {
 ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
 ctx.fillRect(0, 0, width, height);
-
-for (const ball of balls) {
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
-}
 
 for (const ball of balls) {
     if (ball.exist){
