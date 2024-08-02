@@ -10,10 +10,13 @@
 
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
+const ballCount = document.getElementById("score");
 
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
+const numBalls = 25;
+let score = numBalls;
 // function to generate random number
 
 function random(min, max) {
@@ -116,7 +119,7 @@ draw() {
     ctx.beginPath();
     ctx.lineWidth = 3;
     ctx.strokeStyle = this.color;
-    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.arc(650, 250, this.size, 0, 2 * Math.PI);
     ctx.stroke();
 }
 
@@ -147,16 +150,20 @@ collisionDetect() {
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < this.size + ball.size) {
-        ball.exist = false
+            ball.exist = false;
+            score --;
+            ballCount.textContent = `Ball count: ${score}`;
         }
     }
     }
 }
-
 }
+
+
 const balls = [];
 
-while (balls.length < 25) {
+
+while (balls.length < numBalls) {
 const size = random(10, 20);
 const ball = new Ball(
     // ball position always drawn at least one ball width
@@ -171,6 +178,9 @@ const ball = new Ball(
 
 balls.push(ball);
 }
+
+
+
 
 const size = 25;
 const evilCircle = new EvilCircle(
