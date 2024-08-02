@@ -17,6 +17,7 @@ const height = (canvas.height = window.innerHeight);
 
 const numBalls = 25;
 let score = numBalls;
+ballCount.textContent = `Ball count: ${score}`;
 // function to generate random number
 
 function random(min, max) {
