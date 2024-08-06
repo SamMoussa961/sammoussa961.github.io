@@ -1,3 +1,10 @@
+/*
+Name: Samer Moussa
+Due date: august 15th, 2024
+File Name: main.js
+Description: assignment 5 javascript program
+    -->
+*/
 // functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
