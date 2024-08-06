@@ -160,9 +160,7 @@ collisionDetect() {
 }
 }
 
-
 const balls = [];
-
 
 while (balls.length < numBalls) {
 const size = random(10, 20);
@@ -179,9 +177,6 @@ const ball = new Ball(
 
 balls.push(ball);
 }
-
-
-
 
 const size = 25;
 const evilCircle = new EvilCircle(
