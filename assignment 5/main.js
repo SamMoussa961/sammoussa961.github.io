@@ -11,7 +11,9 @@ const commentWrapper = document.querySelector('.comment-wrapper');
 
 commentWrapper.style.display = 'none';
 
-showHideBtn.onclick = function() {
+
+// added a function to toggle comment visibility
+function toggleComments() {
   let showHideText = showHideBtn.textContent;
   if(showHideText === 'Show comments') {
     showHideBtn.textContent = 'Hide comments';
@@ -21,6 +23,16 @@ showHideBtn.onclick = function() {
     commentWrapper.style.display = 'none';
   }
 };
+
+// event listener for button
+showHideBtn.onclick = toggleComments;
+
+// 
+showHideBtn.onkeydown = function(e) {
+  if (e.key ==='Enter'){
+    toggleComments();
+  }
+}
 
 // functionality for adding a new comment via the comments form
 
