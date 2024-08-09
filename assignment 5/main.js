@@ -1,6 +1,6 @@
 /**
 Name: Samer Moussa
-Due date: august 15th, 2024
+Due date: august 8th, 2024
 File Name: main.js
 Description: assignment 5 javascript program
 */
